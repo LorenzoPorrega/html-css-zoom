@@ -11,43 +11,103 @@
 
 main{
     position: relative;
-    border: 2px solid red;
     padding: 150px 50px 50px 50px;
     flex-flow: auto;
     flex-grow: 1;
-    height: 2200px;
+    height: 100vh;
+    background-color: rgb(12, 12, 12);
 }
 
 /* Header */
 
 header{
     position: fixed;
-    height: 100px;
+    height: 7.5vh;
     width: 100%;
     background-color: black;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-end;
-    border: 2px solid rgb(16, 149, 89);
-    z-index: 2;
+    z-index: 3;
+    font-size: 0.8rem;
 }
 
-header i{
+header div{
+    background-color: grey;
     color: white;
+    padding: 4px;
+    margin: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header div span{
+    font-weight: 600;
+}
+
+.enlarge i{
+    padding: 0px 3px 0px;
+}
+
+/* Bottone switch galleria utenti*/
+
+.gallery-button{
+    z-index: 2;
+    position: absolute;
+    bottom: 50vh;
+    right: 0;
+    padding-right: 20px;
+    transition: 0.4s;
+}
+
+.gallery-button:hover{
+    bottom: 49.8vh;
+    right: 0;
+    padding-right: 19px;
+    transition: 0.4s;
+}
+
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(67, 67, 67);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid rgb(76, 76, 76);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.gallery-button:active .circle{
+    background-color: rgb(37, 37, 37);
+    transition: 0.5s;
+    border: 1px solid rgb(37, 37, 37);
+}
+
+.circle div{
+    color: rgb(255, 255, 255);
+}
+
+.circle div i{
+    text-shadow: 0 0 3px #000000;
+    font-size: 2rem;
 }
 
 /* Contenitore webcam users*/
 
 .users-container{
     display: flex;
-    flex-flow: wrap;
-    position: relative;
-    gap: .25rem;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .user{
     width: 250px;
     height: 150px;
+    position: relative;
+    gap: .25rem;
 }
 
 .user div{
@@ -57,11 +117,7 @@ header i{
     left: 0;
     z-index: 1;
     background-color: rgba(90, 90, 90, 0.8);
-    display: inline-block;
     height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 0.75rem;
     padding: 0.5rem;
 }
@@ -69,17 +125,15 @@ header i{
 .user span{
     vertical-align: center;
     font-weight: 600;
-    padding-left: 0.5rem;
 }
 
 /* Footer */
 
 footer{
-    border: 2px solid rgb(190, 97, 30);
     position: fixed;
     bottom: 0;
-    height: 100px;
+    height: 7.5vh;
     width: 100%;
     background-color: rgb(34, 34, 34);
-    z-index: 2;
+    z-index: 3;
 }
