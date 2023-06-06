@@ -9,6 +9,10 @@
     display: flex;
 }
 
+i:hover{
+    cursor: pointer;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -147,33 +151,6 @@ main{
     font-weight: 600;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Footer */
 
 footer{
@@ -188,36 +165,39 @@ footer{
 
 footer i{
     font-size: 2rem;
+    text-align: center;
+}
+
+footer span{
+    text-align: center;
+    display: block;
 }
 
 .fa-angle-up{
     font-size: 1rem;
-    padding-top: 5px;
 }
 
 .media-inputs{
-    width: 15vw;
-    border: 1px solid green;
     display: flex;
     justify-content: space-around;
+    padding-left: 20px;
 }
 
-.video, .microphone{
-    display: flex;
-    justify-content: center;
+.video{
+    width: 100px;
 }
 
-.media-inputs div{
-    margin: 0 0 0 30px;
+.microphone{
+    width: 50px;
 }
 
-.media-inputs div i{
+.media-inputs i, .interactables i{
+    align-self: center;
+    display: block;
     padding: 10px;
 }
 
 .interactables{
-    border: 1px solid red;
-    width: 35vw;
     display: flex;
     justify-content: space-around;
 }
@@ -230,10 +210,14 @@ footer i{
     padding: 10px;
 }
 
+#green-share{
+    color: green;
+}
+
 .exit{
-    width: 10vw;
     border: 1px solid rgb(150, 150, 150);
     background-color: rgb(74, 74, 74);
+    padding: 0px 30px;
     display: flex;
     align-items: center;
     justify-content: center;
